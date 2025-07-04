@@ -1,4 +1,4 @@
-# Copyright 2008-2024 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2024 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for the pixels.processing module."""
 
 import os
@@ -20,10 +20,10 @@ try:
 except ImportError:
     HAVE_PIL = False
 
-from pydicom import dcmread, config
-from pydicom.data import get_testdata_file, get_palette_files
-from pydicom.dataset import Dataset, FileMetaDataset
-from pydicom.pixels.processing import (
+from pydicom_v3_0_1 import dcmread, config
+from pydicom_v3_0_1.data import get_testdata_file, get_palette_files
+from pydicom_v3_0_1.dataset import Dataset, FileMetaDataset
+from pydicom_v3_0_1.pixels.processing import (
     convert_color_space,
     apply_color_lut,
     _expand_segmented_lut,
@@ -35,7 +35,7 @@ from pydicom.pixels.processing import (
     apply_presentation_lut,
     create_icc_transform,
 )
-from pydicom.uid import ExplicitVRLittleEndian, ImplicitVRLittleEndian
+from pydicom_v3_0_1.uid import ExplicitVRLittleEndian, ImplicitVRLittleEndian
 
 
 # PAL: PALETTE COLOR Photometric Interpretation

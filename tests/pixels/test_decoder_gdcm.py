@@ -12,10 +12,10 @@ try:
 except ImportError:
     HAVE_NP = False
 
-from pydicom import dcmread, config
-from pydicom.pixels import get_decoder
-from pydicom.pixels.utils import _passes_version_check
-from pydicom.uid import (
+from pydicom_v3_0_1 import dcmread, config
+from pydicom_v3_0_1.pixels import get_decoder
+from pydicom_v3_0_1.pixels.utils import _passes_version_check
+from pydicom_v3_0_1.uid import (
     JPEGBaseline8Bit,
     JPEGExtended12Bit,
     JPEGLossless,

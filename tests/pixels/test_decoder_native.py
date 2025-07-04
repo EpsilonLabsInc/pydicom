@@ -2,16 +2,16 @@
 
 import pytest
 
-from pydicom import dcmread
-from pydicom.data import get_testdata_file
-from pydicom.pixels import get_decoder
-from pydicom.pixels.decoders import (
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.pixels import get_decoder
+from pydicom_v3_0_1.pixels.decoders import (
     ImplicitVRLittleEndianDecoder,
     ExplicitVRLittleEndianDecoder,
     ExplicitVRBigEndianDecoder,
     DeflatedExplicitVRLittleEndianDecoder,
 )
-from pydicom.uid import (
+from pydicom_v3_0_1.uid import (
     ImplicitVRLittleEndian,
     ExplicitVRLittleEndian,
     DeflatedExplicitVRLittleEndian,

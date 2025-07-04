@@ -16,11 +16,11 @@ try:
 except ImportError:
     pass
 
-from pydicom import dcmread
-from pydicom.encaps import get_frame
-from pydicom.pixels import get_decoder
-from pydicom.pixels.decoders.pillow import is_available
-from pydicom.uid import (
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.encaps import get_frame
+from pydicom_v3_0_1.pixels import get_decoder
+from pydicom_v3_0_1.pixels.decoders.pillow import is_available
+from pydicom_v3_0_1.uid import (
     JPEGBaseline8Bit,
     JPEGExtended12Bit,
     JPEG2000Lossless,

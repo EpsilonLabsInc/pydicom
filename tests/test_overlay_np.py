@@ -1,4 +1,4 @@
-# Copyright 2008-2019 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2019 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for the overlays.numpy_handler module.
 
 There are the following possibilities:
@@ -28,10 +28,10 @@ There are the following possibilities:
 
 import pytest
 
-import pydicom
-from pydicom.data import get_testdata_file
-from pydicom.filereader import dcmread
-from pydicom.uid import ImplicitVRLittleEndian, ExplicitVRLittleEndian
+import pydicom_v3_0_1
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.filereader import dcmread
+from pydicom_v3_0_1.uid import ImplicitVRLittleEndian, ExplicitVRLittleEndian
 
 try:
     import numpy as np
@@ -41,8 +41,8 @@ except ImportError:
     HAVE_NP = False
 
 try:
-    from pydicom.overlays import numpy_handler as NP_HANDLER
-    from pydicom.overlays.numpy_handler import (
+    from pydicom_v3_0_1.overlays import numpy_handler as NP_HANDLER
+    from pydicom_v3_0_1.overlays.numpy_handler import (
         get_overlay_array,
         reshape_overlay_array,
         get_expected_length,

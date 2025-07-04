@@ -1,12 +1,12 @@
 import pytest
 
-from pydicom.sr._cid_dict import (
+from pydicom_v3_0_1.sr._cid_dict import (
     cid_concepts as CID_CONCEPTS,
     name_for_cid,
 )
-from pydicom.sr._concepts_dict import concepts as CONCEPTS
-from pydicom.sr.coding import Code
-from pydicom.sr.codedict import (
+from pydicom_v3_0_1.sr._concepts_dict import concepts as CONCEPTS
+from pydicom_v3_0_1.sr.coding import Code
+from pydicom_v3_0_1.sr.codedict import (
     codes,
     Collection,
     Concepts,

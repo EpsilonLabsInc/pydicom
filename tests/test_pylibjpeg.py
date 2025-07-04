@@ -1,17 +1,17 @@
-# Copyright 2020 pydicom authors. See LICENSE file for details.
+# Copyright 2020 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for the pixel_data_handlers.pylibjpeg_handler module."""
 
 from pathlib import Path
 
 import pytest
 
-import pydicom
-from pydicom.data import get_testdata_file
-from pydicom.encaps import get_frame
-from pydicom.filereader import dcmread
-from pydicom.pixels.processing import convert_color_space
-from pydicom.pixels.utils import get_j2k_parameters, get_expected_length
-from pydicom.uid import (
+import pydicom_v3_0_1
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.encaps import get_frame
+from pydicom_v3_0_1.filereader import dcmread
+from pydicom_v3_0_1.pixels.processing import convert_color_space
+from pydicom_v3_0_1.pixels.utils import get_j2k_parameters, get_expected_length
+from pydicom_v3_0_1.uid import (
     JPEGBaseline8Bit,
     JPEGExtended12Bit,
     JPEGLossless,
@@ -26,7 +26,7 @@ from pydicom.uid import (
 
 try:
     import numpy as np
-    from pydicom.pixel_data_handlers import numpy_handler as NP_HANDLER
+    from pydicom_v3_0_1.pixel_data_handlers import numpy_handler as NP_HANDLER
 
     HAVE_NP = True
 except ImportError:
@@ -34,8 +34,8 @@ except ImportError:
     HAVE_NP = False
 
 try:
-    from pydicom.pixel_data_handlers import pylibjpeg_handler as LJ_HANDLER
-    from pydicom.pixel_data_handlers.pylibjpeg_handler import (
+    from pydicom_v3_0_1.pixel_data_handlers import pylibjpeg_handler as LJ_HANDLER
+    from pydicom_v3_0_1.pixel_data_handlers.pylibjpeg_handler import (
         get_pixeldata,
         as_array,
         generate_frames,
@@ -447,7 +447,7 @@ class TestHandler:
         with pytest.raises(RuntimeError, match=msg):
             ds.pixel_array
 
-        # Don't use pydicom decoder
+        # Don't use pydicom_v3_0_1 decoder
         ds = dcmread(RLE_8_1_1F)
         ds.pixel_array_options(use_v2_backend=True)
         msg = (

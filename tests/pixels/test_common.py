@@ -9,9 +9,9 @@ try:
 except ImportError:
     HAVE_NP = False
 
-from pydicom import dcmread
-from pydicom.pixels.common import CoderBase, RunnerBase, PhotometricInterpretation as PI
-from pydicom.uid import (
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.pixels.common import CoderBase, RunnerBase, PhotometricInterpretation as PI
+from pydicom_v3_0_1.uid import (
     RLELossless,
     ExplicitVRLittleEndian,
     JPEGBaseline8Bit,

@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Unit tests for the pydicom.filereader module."""
 
 import gzip
@@ -14,36 +14,36 @@ import tempfile
 
 import pytest
 
-import pydicom.config
-from pydicom import config, dicomio
-from pydicom.dataset import Dataset, FileDataset, FileMetaDataset
-from pydicom.data import get_testdata_file
-from pydicom.datadict import add_dict_entries
-from pydicom.filereader import (
+import pydicom_v3_0_1.config
+from pydicom_v3_0_1 import config, dicomio
+from pydicom_v3_0_1.dataset import Dataset, FileDataset, FileMetaDataset
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.datadict import add_dict_entries
+from pydicom_v3_0_1.filereader import (
     dcmread,
     read_dataset,
     data_element_generator,
     read_file_meta_info,
 )
-from pydicom.dataelem import DataElement, convert_raw_data_element
-from pydicom.errors import InvalidDicomError
-from pydicom.filebase import DicomBytesIO
-from pydicom.multival import MultiValue
-from pydicom.sequence import Sequence
-from pydicom.tag import Tag, TupleTag
-import pydicom.uid
-from pydicom.uid import (
+from pydicom_v3_0_1.dataelem import DataElement, convert_raw_data_element
+from pydicom_v3_0_1.errors import InvalidDicomError
+from pydicom_v3_0_1.filebase import DicomBytesIO
+from pydicom_v3_0_1.multival import MultiValue
+from pydicom_v3_0_1.sequence import Sequence
+from pydicom_v3_0_1.tag import Tag, TupleTag
+import pydicom_v3_0_1.uid
+from pydicom_v3_0_1.uid import (
     ImplicitVRLittleEndian,
     ExplicitVRLittleEndian,
     UID,
     register_transfer_syntax,
     PrivateTransferSyntaxes,
 )
-import pydicom.valuerep
-from pydicom import values
+import pydicom_v3_0_1.valuerep
+from pydicom_v3_0_1 import values
 
 
-from pydicom.pixel_data_handlers import gdcm_handler
+from pydicom_v3_0_1.pixel_data_handlers import gdcm_handler
 
 have_gdcm_handler = gdcm_handler.is_available()
 

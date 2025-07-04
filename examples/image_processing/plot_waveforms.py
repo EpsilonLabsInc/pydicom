@@ -11,8 +11,8 @@ matplotlib.
 import numpy as np
 import matplotlib.pyplot as plt
 
-from pydicom import examples
-from pydicom.waveforms import generate_multiplex
+from pydicom_v3_0_1 import examples
+from pydicom_v3_0_1.waveforms import generate_multiplex
 
 ds = examples.waveform
 

@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Unit tests for the pydicom.dataelem module."""
 
 # Many tests of DataElement class are implied in test_dataset also
@@ -12,29 +12,29 @@ import tempfile
 
 import pytest
 
-from pydicom import filewriter, config, dcmread
-from pydicom.charset import default_encoding
-from pydicom.data import get_testdata_file
-from pydicom.datadict import add_private_dict_entry
-from pydicom.dataelem import (
+from pydicom_v3_0_1 import filewriter, config, dcmread
+from pydicom_v3_0_1.charset import default_encoding
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.datadict import add_private_dict_entry
+from pydicom_v3_0_1.dataelem import (
     DataElement,
     RawDataElement,
     convert_raw_data_element,
 )
-from pydicom.dataset import Dataset
-from pydicom.errors import BytesLengthException
-from pydicom.filebase import DicomBytesIO
-from pydicom.fileutil import read_buffer
-from pydicom.hooks import (
+from pydicom_v3_0_1.dataset import Dataset
+from pydicom_v3_0_1.errors import BytesLengthException
+from pydicom_v3_0_1.filebase import DicomBytesIO
+from pydicom_v3_0_1.fileutil import read_buffer
+from pydicom_v3_0_1.hooks import (
     hooks,
     raw_element_value_retry,
     raw_element_value_fix_separator,
 )
-from pydicom.multival import MultiValue
-from pydicom.tag import Tag, BaseTag
+from pydicom_v3_0_1.multival import MultiValue
+from pydicom_v3_0_1.tag import Tag, BaseTag
 from .test_util import save_private_dict
-from pydicom.uid import UID
-from pydicom.valuerep import BUFFERABLE_VRS, DSfloat, validate_value
+from pydicom_v3_0_1.uid import UID
+from pydicom_v3_0_1.valuerep import BUFFERABLE_VRS, DSfloat, validate_value
 
 
 IS_WINDOWS = platform.system() == "Windows"
@@ -1638,7 +1638,7 @@ def use_future():
 
 
 def test_deprecation_warnings():
-    from pydicom.dataelem import DataElement_from_raw
+    from pydicom_v3_0_1.dataelem import DataElement_from_raw
 
     raw = RawDataElement(Tag(0x00100010), None, 4, b"unknown", 0, True, True)
     msg = (
@@ -1651,4 +1651,4 @@ def test_deprecation_warnings():
 
 def test_import_raises(use_future):
     with pytest.raises(ImportError):
-        from pydicom.dataelem import DataElement_from_raw
+        from pydicom_v3_0_1.dataelem import DataElement_from_raw

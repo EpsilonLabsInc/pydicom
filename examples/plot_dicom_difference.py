@@ -12,7 +12,7 @@ This examples illustrates how to find the differences between two DICOM files.
 
 import difflib
 
-from pydicom import examples
+from pydicom_v3_0_1 import examples
 
 print(__doc__)
 

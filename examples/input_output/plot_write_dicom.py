@@ -16,9 +16,9 @@ import datetime
 from pathlib import Path
 import tempfile
 
-import pydicom
-from pydicom.dataset import Dataset, FileMetaDataset
-from pydicom.uid import UID, ExplicitVRLittleEndian
+import pydicom_v3_0_1
+from pydicom_v3_0_1.dataset import Dataset, FileMetaDataset
+from pydicom_v3_0_1.uid import UID, ExplicitVRLittleEndian
 
 
 print("Setting dataset values...")

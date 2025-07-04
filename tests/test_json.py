@@ -1,16 +1,16 @@
-# Copyright 2008-2019 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2019 pydicom_v3_0_1 authors. See LICENSE file for details.
 import json
 import logging
 from unittest import mock
 
 import pytest
 
-from pydicom import dcmread
-from pydicom.data import get_testdata_file
-from pydicom.dataelem import DataElement, RawDataElement
-from pydicom.dataset import Dataset
-from pydicom.tag import Tag, BaseTag
-from pydicom.valuerep import PersonName
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.dataelem import DataElement, RawDataElement
+from pydicom_v3_0_1.dataset import Dataset
+from pydicom_v3_0_1.tag import Tag, BaseTag
+from pydicom_v3_0_1.valuerep import PersonName
 
 
 class TestPersonName:

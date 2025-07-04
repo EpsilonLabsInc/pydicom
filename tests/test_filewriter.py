@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """test cases for pydicom.filewriter module"""
 import tempfile
 from copy import deepcopy
@@ -24,13 +24,13 @@ except ImportError:
 
 import pytest
 
-from pydicom import config, __version_info__, uid
-from pydicom.data import get_testdata_file, get_charset_files
-from pydicom.dataset import Dataset, FileDataset, FileMetaDataset
-from pydicom.dataelem import DataElement, RawDataElement
-from pydicom.filebase import DicomBytesIO
-from pydicom.filereader import dcmread, read_dataset
-from pydicom.filewriter import (
+from pydicom_v3_0_1 import config, __version_info__, uid
+from pydicom_v3_0_1.data import get_testdata_file, get_charset_files
+from pydicom_v3_0_1.dataset import Dataset, FileDataset, FileMetaDataset
+from pydicom_v3_0_1.dataelem import DataElement, RawDataElement
+from pydicom_v3_0_1.filebase import DicomBytesIO
+from pydicom_v3_0_1.filereader import dcmread, read_dataset
+from pydicom_v3_0_1.filewriter import (
     _determine_encoding,
     write_data_element,
     write_dataset,
@@ -46,10 +46,10 @@ from pydicom.filewriter import (
     writers,
     dcmwrite,
 )
-from pydicom.multival import MultiValue
-from pydicom.sequence import Sequence
+from pydicom_v3_0_1.multival import MultiValue
+from pydicom_v3_0_1.sequence import Sequence
 from .test_helpers import assert_no_warning
-from pydicom.uid import (
+from pydicom_v3_0_1.uid import (
     ImplicitVRLittleEndian,
     ExplicitVRBigEndian,
     ExplicitVRLittleEndian,
@@ -58,9 +58,9 @@ from pydicom.uid import (
     CTImageStorage,
     UID,
 )
-from pydicom.util.hexutil import hex2bytes
-from pydicom.valuerep import BUFFERABLE_VRS, DA, DT, TM, VR
-from pydicom.values import convert_text
+from pydicom_v3_0_1.util.hexutil import hex2bytes
+from pydicom_v3_0_1.valuerep import BUFFERABLE_VRS, DA, DT, TM, VR
+from pydicom_v3_0_1.values import convert_text
 from ._write_stds import impl_LE_deflen_std_hex
 
 rtplan_name = get_testdata_file("rtplan.dcm")

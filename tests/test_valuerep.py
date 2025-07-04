@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Test suite for valuerep.py"""
 
 import copy
@@ -11,15 +11,15 @@ import math
 
 import pytest
 
-import pydicom
-from pydicom import config, valuerep
-from pydicom.config import settings
-from pydicom.data import get_testdata_file
-from pydicom.dataset import Dataset
-from pydicom._dicom_dict import DicomDictionary, RepeatersDictionary
-from pydicom.filereader import read_dataset
-from pydicom.tag import Tag
-from pydicom.valuerep import (
+import pydicom_v3_0_1
+from pydicom_v3_0_1 import config, valuerep
+from pydicom_v3_0_1.config import settings
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.dataset import Dataset
+from pydicom_v3_0_1._dicom_dict import DicomDictionary, RepeatersDictionary
+from pydicom_v3_0_1.filereader import read_dataset
+from pydicom_v3_0_1.tag import Tag
+from pydicom_v3_0_1.valuerep import (
     DS,
     IS,
     DSfloat,
@@ -35,7 +35,7 @@ from pydicom.valuerep import (
     INT_VR,
     LIST_VR,
 )
-from pydicom.values import convert_value
+from pydicom_v3_0_1.values import convert_value
 
 
 badvr_name = get_testdata_file("badVR.dcm")
@@ -416,7 +416,7 @@ class TestTruncateFloatForDS:
     """Unit tests for float truncation function"""
 
     def check_valid(self, s: str) -> bool:
-        # Use the pydicom test function
+        # Use the pydicom_v3_0_1 test function
         if not pydicom.valuerep.is_valid_ds(s):
             return False
 
@@ -1245,7 +1245,7 @@ class TestPersonName:
     def test_not_equal(self):
         """PN3: Not equal works correctly (issue 121)..."""
         # Meant to only be used in python 3 but doing simple check here
-        from pydicom.valuerep import PersonName
+        from pydicom_v3_0_1.valuerep import PersonName
 
         pn = PersonName("John^Doe")
         assert not pn != "John^Doe"
@@ -1253,7 +1253,7 @@ class TestPersonName:
     def test_encoding_carried(self):
         """Test encoding is carried over to a new PN3 object"""
         # Issue 466
-        from pydicom.valuerep import PersonName
+        from pydicom_v3_0_1.valuerep import PersonName
 
         pn = PersonName("John^Doe", encodings="iso_ir_126")
         assert pn.encodings == ("iso_ir_126",)

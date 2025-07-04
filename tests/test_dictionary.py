@@ -1,11 +1,11 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Test for datadict.py"""
 
 import pytest
 
-from pydicom import DataElement
-from pydicom.dataset import Dataset
-from pydicom.datadict import (
+from pydicom_v3_0_1 import DataElement
+from pydicom_v3_0_1.dataset import Dataset
+from pydicom_v3_0_1.datadict import (
     keyword_for_tag,
     dictionary_description,
     dictionary_has_tag,
@@ -19,7 +19,7 @@ from pydicom.datadict import (
     add_private_dict_entry,
     _dictionary_vr_fast,
 )
-from pydicom.datadict import add_dict_entry, add_dict_entries
+from pydicom_v3_0_1.datadict import add_dict_entry, add_dict_entries
 from .test_util import save_private_dict
 
 

@@ -1,4 +1,4 @@
-# Copyright 2008-2024 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2024 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for the pixels.utils module."""
 
 import importlib
@@ -18,13 +18,13 @@ try:
 except ImportError:
     HAVE_NP = False
 
-from pydicom import dcmread, config
-from pydicom.dataset import Dataset, FileMetaDataset
-from pydicom.encaps import get_frame, encapsulate
-from pydicom.pixels import pixel_array, iter_pixels, convert_color_space
-from pydicom.pixels.decoders.base import _PIXEL_DATA_DECODERS
-from pydicom.pixels.encoders import RLELosslessEncoder
-from pydicom.pixels.utils import (
+from pydicom_v3_0_1 import dcmread, config
+from pydicom_v3_0_1.dataset import Dataset, FileMetaDataset
+from pydicom_v3_0_1.encaps import get_frame, encapsulate
+from pydicom_v3_0_1.pixels import pixel_array, iter_pixels, convert_color_space
+from pydicom_v3_0_1.pixels.decoders.base import _PIXEL_DATA_DECODERS
+from pydicom_v3_0_1.pixels.encoders import RLELosslessEncoder
+from pydicom_v3_0_1.pixels.utils import (
     as_pixel_options,
     _passes_version_check,
     _get_jpg_parameters,
@@ -40,7 +40,7 @@ from pydicom.pixels.utils import (
     compress,
     decompress,
 )
-from pydicom.uid import (
+from pydicom_v3_0_1.uid import (
     EnhancedMRImageStorage,
     ExplicitVRLittleEndian,
     ExplicitVRBigEndian,

@@ -1,14 +1,14 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Unit tests for the pydicom.charset module."""
 
 import pytest
 
-import pydicom.charset
-from pydicom import dcmread
-from pydicom.data import get_charset_files, get_testdata_file
-from pydicom.dataelem import DataElement
-from pydicom.filebase import DicomBytesIO
-from pydicom.valuerep import PersonName
+import pydicom_v3_0_1.charset
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.data import get_charset_files, get_testdata_file
+from pydicom_v3_0_1.dataelem import DataElement
+from pydicom_v3_0_1.filebase import DicomBytesIO
+from pydicom_v3_0_1.valuerep import PersonName
 
 # The file names (without '.dcm' extension) of most of the character test
 # files, together with the respective decoded PatientName tag values.
@@ -466,7 +466,7 @@ class TestCharset:
         multiPN_name = get_charset_files("chrFrenMulti.dcm")[0]
         ds = dcmread(multiPN_name)  # is Latin-1
         ds.SpecificCharacterSet = "ISO_IR 192"
-        from pydicom.filebase import DicomBytesIO
+        from pydicom_v3_0_1.filebase import DicomBytesIO
 
         fp = DicomBytesIO()
         ds.save_as(fp, enforce_file_format=True)

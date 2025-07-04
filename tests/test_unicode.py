@@ -1,10 +1,10 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Unit tests for unicode."""
 
 import sys
 
 
-from pydicom import dcmread
+from pydicom_v3_0_1 import dcmread
 
 
 class TestUnicodeFilenames:

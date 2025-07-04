@@ -11,8 +11,8 @@ Given an RTPLAN DICOM file, list basic info for the beams in it.
 #           Guillaume Lemaitre <g.lemaitre58@gmail.com>
 # license : MIT
 
-import pydicom
-from pydicom.data import get_testdata_file
+import pydicom_v3_0_1
+from pydicom_v3_0_1.data import get_testdata_file
 
 print(__doc__)
 

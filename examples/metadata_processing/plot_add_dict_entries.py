@@ -8,15 +8,15 @@ dictionary dynamically. This allows you to read private tags not present in
 pydicom's private dictionary when loading an existing dataset.
 """
 
-# authors : Darcy Mason and pydicom contributors
+# authors : Darcy Mason and pydicom_v3_0_1 contributors
 # license : MIT
 
 import io
 
-from pydicom import dcmread
-from pydicom.datadict import add_private_dict_entries
-from pydicom.dataset import Dataset
-from pydicom.valuerep import VR
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.datadict import add_private_dict_entries
+from pydicom_v3_0_1.dataset import Dataset
+from pydicom_v3_0_1.valuerep import VR
 
 print(__doc__)
 

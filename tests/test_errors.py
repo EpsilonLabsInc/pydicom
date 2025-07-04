@@ -1,9 +1,9 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for errors.py"""
 
 import pytest
 
-from pydicom.errors import InvalidDicomError
+from pydicom_v3_0_1.errors import InvalidDicomError
 
 
 def test_message():

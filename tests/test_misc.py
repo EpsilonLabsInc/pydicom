@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for misc.py"""
 
 import logging
@@ -6,8 +6,8 @@ import os
 
 import pytest
 
-from pydicom.data import get_testdata_file
-from pydicom.misc import is_dicom, size_in_bytes, warn_and_log
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.misc import is_dicom, size_in_bytes, warn_and_log
 
 
 test_file = get_testdata_file("CT_small.dcm")

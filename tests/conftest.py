@@ -1,8 +1,8 @@
-# Copyright 2008-2020 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2020 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Fixtures used in different tests."""
 
 import pytest
-from pydicom import config
+from pydicom_v3_0_1 import config
 
 
 @pytest.fixture

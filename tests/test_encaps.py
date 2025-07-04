@@ -1,4 +1,4 @@
-# Copyright 2008-2020 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2020 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Test for encaps.py"""
 
 from io import BytesIO
@@ -8,9 +8,9 @@ import tempfile
 
 import pytest
 
-from pydicom import dcmread, config, encaps
-from pydicom.data import get_testdata_file
-from pydicom.encaps import (
+from pydicom_v3_0_1 import dcmread, config, encaps
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.encaps import (
     fragment_frame,
     itemize_frame,
     encapsulate,
@@ -26,8 +26,8 @@ from pydicom.encaps import (
     encapsulate_buffer,
     encapsulate_extended_buffer,
 )
-from pydicom.filebase import DicomBytesIO
-from pydicom.fileutil import read_buffer
+from pydicom_v3_0_1.filebase import DicomBytesIO
+from pydicom_v3_0_1.fileutil import read_buffer
 
 
 JP2K_10FRAME_NOBOT = get_testdata_file("emri_small_jpeg_2k_lossless.dcm")
@@ -3798,25 +3798,25 @@ def use_future():
 class TestFuture:
     def test_imports_raise(self, use_future):
         with pytest.raises(ImportError):
-            from pydicom.encaps import generate_pixel_data_fragment
+            from pydicom_v3_0_1.encaps import generate_pixel_data_fragment
 
         with pytest.raises(ImportError):
-            from pydicom.encaps import get_frame_offsets
+            from pydicom_v3_0_1.encaps import get_frame_offsets
 
         with pytest.raises(ImportError):
-            from pydicom.encaps import get_nr_fragments
+            from pydicom_v3_0_1.encaps import get_nr_fragments
 
         with pytest.raises(ImportError):
-            from pydicom.encaps import generate_pixel_data_frame
+            from pydicom_v3_0_1.encaps import generate_pixel_data_frame
 
         with pytest.raises(ImportError):
-            from pydicom.encaps import generate_pixel_data
+            from pydicom_v3_0_1.encaps import generate_pixel_data
 
         with pytest.raises(ImportError):
-            from pydicom.encaps import decode_data_sequence
+            from pydicom_v3_0_1.encaps import decode_data_sequence
 
         with pytest.raises(ImportError):
-            from pydicom.encaps import defragment_data
+            from pydicom_v3_0_1.encaps import defragment_data
 
         with pytest.raises(ImportError):
-            from pydicom.encaps import read_item
+            from pydicom_v3_0_1.encaps import read_item

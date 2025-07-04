@@ -2,7 +2,7 @@
 
 import pytest
 
-from pydicom.hooks import hooks, raw_element_vr, raw_element_value
+from pydicom_v3_0_1.hooks import hooks, raw_element_vr, raw_element_value
 
 
 @pytest.fixture

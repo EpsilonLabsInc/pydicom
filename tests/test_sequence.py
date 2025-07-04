@@ -1,12 +1,12 @@
-# Copyright 2008-2020 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2020 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Unit tests for the pydicom.sequence module."""
 
 import copy
 
 import pytest
 
-from pydicom.dataset import Dataset
-from pydicom.sequence import Sequence
+from pydicom_v3_0_1.dataset import Dataset
+from pydicom_v3_0_1.sequence import Sequence
 
 
 class TestSequence:

@@ -82,12 +82,12 @@ repository = "https://github.com/pydicom/pydicom"
 
 
 [project.scripts]
-pydicom = "pydicom.cli.main:main"
+pydicom = "pydicom_v3_0_1.cli.main:main"
 
 
 [project.entry-points.pydicom_subcommands]
-codify = "pydicom.cli.codify:add_subparser"
-show = "pydicom.cli.show:add_subparser"
+codify = "pydicom_v3_0_1.cli.codify:add_subparser"
+show = "pydicom_v3_0_1.cli.show:add_subparser"
 
 
 [tool.black]
@@ -130,16 +130,16 @@ max-statements = 108
 
 [tool.ruff.lint.per-file-ignores]
 "*/__init__.py" = ["F401"]
-"src/pydicom/_*_dict.py" = ["E501"]
-"src/pydicom/config.py" = ["PLW0602"]
-"src/pydicom/uid.py" = ["E501"]
-"src/pydicom/sr/_concepts_dict.py" = ["F601"]
+"src/pydicom_v3_0_1/_*_dict.py" = ["E501"]
+"src/pydicom_v3_0_1/config.py" = ["PLW0602"]
+"src/pydicom_v3_0_1/uid.py" = ["E501"]
+"src/pydicom_v3_0_1/sr/_concepts_dict.py" = ["F601"]
 "tests/*.py" = ["F401"]
 
 [tool.mypy]
 python_version = "3.10"
 files = "src/"
-exclude = ["src/pydicom/benchmarks/", "src/pydicom/pixel_data_handlers/pillow_handler.py"]
+exclude = ["src/pydicom_v3_0_1/benchmarks/", "src/pydicom_v3_0_1/pixel_data_handlers/pillow_handler.py"]
 warn_redundant_casts = false
 warn_unused_ignores = false
 warn_return_any = true
@@ -153,5 +153,5 @@ disable_error_code = ["method-assign", "ignore-without-code", "redundant-expr", 
 [[tool.mypy.overrides]]
 # 2023-06: mypy complains for a line in this file if ignore used or not.
 # Override unused ignores for that one file
-module = "pydicom.encoders.base"
+module = "pydicom_v3_0_1.encoders.base"
 warn_unused_ignores = false

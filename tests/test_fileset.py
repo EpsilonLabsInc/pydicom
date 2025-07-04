@@ -6,11 +6,11 @@ from tempfile import TemporaryDirectory
 
 import pytest
 
-from pydicom import dcmread
-from pydicom.data import get_testdata_file
-from pydicom.dataset import Dataset, FileMetaDataset
-from pydicom.filebase import DicomBytesIO
-from pydicom.fileset import (
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.dataset import Dataset, FileMetaDataset
+from pydicom_v3_0_1.filebase import DicomBytesIO
+from pydicom_v3_0_1.fileset import (
     FileSet,
     FileInstance,
     RecordNode,
@@ -22,9 +22,9 @@ from pydicom.fileset import (
     _define_image,
     _PREFIXES,
 )
-from pydicom.filewriter import write_dataset
-from pydicom.tag import Tag
-from pydicom.uid import (
+from pydicom_v3_0_1.filewriter import write_dataset
+from pydicom_v3_0_1.tag import Tag
+from pydicom_v3_0_1.uid import (
     ExplicitVRLittleEndian,
     generate_uid,
     ImplicitVRLittleEndian,

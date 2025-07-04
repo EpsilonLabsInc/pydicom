@@ -12,8 +12,8 @@ information, and show it using matplotlib.
 # license : MIT
 
 import matplotlib.pyplot as plt
-from pydicom import dcmread
-from pydicom.data import get_testdata_file
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.data import get_testdata_file
 
 path = get_testdata_file("CT_small.dcm")
 ds = dcmread(path)

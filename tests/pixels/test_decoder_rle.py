@@ -1,21 +1,21 @@
-"""Tests for the RLELosslessDecoder and the pydicom RLE plugin."""
+"""Tests for the RLELosslessDecoder and the pydicom_v3_0_1 RLE plugin."""
 
 from io import BytesIO
 from struct import pack, unpack
 
 import pytest
 
-from pydicom import dcmread
-from pydicom.config import debug
-from pydicom.encaps import get_frame, generate_frames, encapsulate
-from pydicom.pixels import get_decoder
-from pydicom.pixels.decoders import RLELosslessDecoder
-from pydicom.pixels.decoders.rle import (
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.config import debug
+from pydicom_v3_0_1.encaps import get_frame, generate_frames, encapsulate
+from pydicom_v3_0_1.pixels import get_decoder
+from pydicom_v3_0_1.pixels.decoders import RLELosslessDecoder
+from pydicom_v3_0_1.pixels.decoders.rle import (
     _rle_parse_header,
     _rle_decode_segment,
     _rle_decode_frame,
 )
-from pydicom.uid import RLELossless, ExplicitVRLittleEndian
+from pydicom_v3_0_1.uid import RLELossless, ExplicitVRLittleEndian
 
 try:
     import numpy as np

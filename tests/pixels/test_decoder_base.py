@@ -8,16 +8,16 @@ from sys import byteorder
 
 import pytest
 
-from pydicom import config, dcmread
-from pydicom.dataset import Dataset
-from pydicom.encaps import get_frame, generate_frames, encapsulate
-from pydicom.pixels import get_decoder
-from pydicom.pixels.common import PhotometricInterpretation as PI
-from pydicom.pixels.decoders import ExplicitVRLittleEndianDecoder
-from pydicom.pixels.decoders.base import DecodeRunner, Decoder
-from pydicom.pixels.processing import convert_color_space
+from pydicom_v3_0_1 import config, dcmread
+from pydicom_v3_0_1.dataset import Dataset
+from pydicom_v3_0_1.encaps import get_frame, generate_frames, encapsulate
+from pydicom_v3_0_1.pixels import get_decoder
+from pydicom_v3_0_1.pixels.common import PhotometricInterpretation as PI
+from pydicom_v3_0_1.pixels.decoders import ExplicitVRLittleEndianDecoder
+from pydicom_v3_0_1.pixels.decoders.base import DecodeRunner, Decoder
+from pydicom_v3_0_1.pixels.processing import convert_color_space
 
-from pydicom.uid import (
+from pydicom_v3_0_1.uid import (
     ExplicitVRLittleEndian,
     ImplicitVRLittleEndian,
     DeflatedExplicitVRLittleEndian,

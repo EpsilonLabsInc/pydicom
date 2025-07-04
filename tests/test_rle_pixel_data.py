@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for the pixel_data_handlers.rle_handler module.
 
 There are the following possibilities:
@@ -27,16 +27,16 @@ from struct import pack, unpack
 
 import pytest
 
-from pydicom import dcmread
-import pydicom.config
-from pydicom.data import get_testdata_file
-from pydicom.encaps import get_frame, generate_frames, encapsulate
-from pydicom.uid import RLELossless, AllTransferSyntaxes, ExplicitVRLittleEndian
+from pydicom_v3_0_1 import dcmread
+import pydicom_v3_0_1.config
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.encaps import get_frame, generate_frames, encapsulate
+from pydicom_v3_0_1.uid import RLELossless, AllTransferSyntaxes, ExplicitVRLittleEndian
 
 try:
     import numpy as np
-    from pydicom.pixel_data_handlers import numpy_handler as NP_HANDLER
-    from pydicom.pixels.utils import reshape_pixel_array
+    from pydicom_v3_0_1.pixel_data_handlers import numpy_handler as NP_HANDLER
+    from pydicom_v3_0_1.pixels.utils import reshape_pixel_array
 
     HAVE_NP = NP_HANDLER.HAVE_NP
 except ImportError:
@@ -44,8 +44,8 @@ except ImportError:
     HAVE_NP = False
 
 try:
-    from pydicom.pixel_data_handlers import rle_handler as RLE_HANDLER
-    from pydicom.pixel_data_handlers.rle_handler import (
+    from pydicom_v3_0_1.pixel_data_handlers import rle_handler as RLE_HANDLER
+    from pydicom_v3_0_1.pixel_data_handlers.rle_handler import (
         get_pixeldata,
         _rle_decode_frame,
         _rle_decode_segment,

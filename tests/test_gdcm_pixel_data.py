@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Unit tests for the GDCM Pixel Data handler."""
 
 from io import BytesIO
@@ -16,14 +16,14 @@ try:
 except ImportError:
     HAVE_NP = False
 
-import pydicom
-from pydicom.filereader import dcmread
-from pydicom.data import get_testdata_file
-from pydicom.encaps import get_frame
-from pydicom.pixel_data_handlers import numpy_handler, gdcm_handler
-from pydicom.pixels.processing import _convert_YBR_FULL_to_RGB
-from pydicom.pixels.utils import get_j2k_parameters
-from pydicom.tag import Tag
+import pydicom_v3_0_1
+from pydicom_v3_0_1.filereader import dcmread
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.encaps import get_frame
+from pydicom_v3_0_1.pixel_data_handlers import numpy_handler, gdcm_handler
+from pydicom_v3_0_1.pixels.processing import _convert_YBR_FULL_to_RGB
+from pydicom_v3_0_1.pixels.utils import get_j2k_parameters
+from pydicom_v3_0_1.tag import Tag
 
 try:
     import gdcm

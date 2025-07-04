@@ -1,4 +1,4 @@
-# Copyright 2008-2023 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2023 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Unit tests for the pydicom.dataset module."""
 
 import copy
@@ -13,7 +13,7 @@ import tempfile
 
 import pytest
 
-from pydicom.datadict import add_private_dict_entry
+from pydicom_v3_0_1.datadict import add_private_dict_entry
 from .test_helpers import assert_no_warning
 
 try:
@@ -23,18 +23,18 @@ try:
 except ImportError:
     HAVE_NP = False
 
-import pydicom
-from pydicom import config
-from pydicom import dcmread
-from pydicom.data import get_testdata_file
-from pydicom.dataelem import DataElement, RawDataElement
-from pydicom.dataset import Dataset, FileDataset, validate_file_meta, FileMetaDataset
-from pydicom.encaps import encapsulate
-from pydicom.filebase import DicomBytesIO
-from pydicom.pixels.utils import get_image_pixel_ids
-from pydicom.sequence import Sequence
-from pydicom.tag import Tag
-from pydicom.uid import (
+import pydicom_v3_0_1
+from pydicom_v3_0_1 import config
+from pydicom_v3_0_1 import dcmread
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.dataelem import DataElement, RawDataElement
+from pydicom_v3_0_1.dataset import Dataset, FileDataset, validate_file_meta, FileMetaDataset
+from pydicom_v3_0_1.encaps import encapsulate
+from pydicom_v3_0_1.filebase import DicomBytesIO
+from pydicom_v3_0_1.pixels.utils import get_image_pixel_ids
+from pydicom_v3_0_1.sequence import Sequence
+from pydicom_v3_0_1.tag import Tag
+from pydicom_v3_0_1.uid import (
     ImplicitVRLittleEndian,
     ExplicitVRLittleEndian,
     ExplicitVRBigEndian,
@@ -42,7 +42,7 @@ from pydicom.uid import (
     PYDICOM_IMPLEMENTATION_UID,
     CTImageStorage,
 )
-from pydicom.valuerep import DS, VR
+from pydicom_v3_0_1.valuerep import DS, VR
 
 
 class BadRepr:

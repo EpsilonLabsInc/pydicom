@@ -1,11 +1,11 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Test suite for uid.py"""
 
 import uuid
 
 import pytest
 
-from pydicom.uid import (
+from pydicom_v3_0_1.uid import (
     UID,
     generate_uid,
     register_transfer_syntax,
@@ -13,7 +13,7 @@ from pydicom.uid import (
     JPEGLSNearLossless,
     CTImageStorage,
 )
-import pydicom.uid
+import pydicom_v3_0_1.uid
 
 
 def test_storage_sopclass_uids():
@@ -23,7 +23,7 @@ def test_storage_sopclass_uids():
 class TestGenerateUID:
     def test_generate_uid(self):
         """Test UID generator"""
-        # Test standard UID generation with pydicom prefix
+        # Test standard UID generation with pydicom_v3_0_1 prefix
         uid = generate_uid()
         assert uid[:26] == PYDICOM_ROOT_UID
         assert len(uid) <= 64

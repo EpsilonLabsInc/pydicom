@@ -1,10 +1,10 @@
-# Copyright 2008-2020 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2020 pydicom_v3_0_1 authors. See LICENSE file for details.
 
 
 import pytest
 
-from pydicom.data import get_testdata_file
-from pydicom.filereader import dcmread
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.filereader import dcmread
 
 try:
     import numpy as np
@@ -14,8 +14,8 @@ except ImportError:
     HAVE_NP = False
 
 try:
-    from pydicom.waveforms import numpy_handler as NP_HANDLER
-    from pydicom.waveforms.numpy_handler import generate_multiplex, multiplex_array
+    from pydicom_v3_0_1.waveforms import numpy_handler as NP_HANDLER
+    from pydicom_v3_0_1.waveforms.numpy_handler import generate_multiplex, multiplex_array
 except ImportError:
     NP_HANDLER = None
 

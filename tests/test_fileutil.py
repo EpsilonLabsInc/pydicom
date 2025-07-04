@@ -1,4 +1,4 @@
-# Copyright 2008-2020 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2020 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Test suite for util functions"""
 from io import BytesIO, RawIOBase
 from pathlib import Path
@@ -7,8 +7,8 @@ import tempfile
 
 import pytest
 
-from pydicom.config import settings
-from pydicom.fileutil import (
+from pydicom_v3_0_1.config import settings
+from pydicom_v3_0_1.fileutil import (
     path_from_pathlike,
     check_buffer,
     reset_buffer_position,

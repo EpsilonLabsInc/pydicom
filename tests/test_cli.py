@@ -1,11 +1,11 @@
-# Copyright 2020 pydicom authors. See LICENSE file for details.
+# Copyright 2020 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for command-line interface"""
 
 from argparse import ArgumentTypeError
 
 import pytest
 
-from pydicom.cli.main import filespec_parser, eval_element, main, filespec_parts
+from pydicom_v3_0_1.cli.main import filespec_parser, eval_element, main, filespec_parts
 
 
 bad_elem_specs = (
@@ -48,7 +48,7 @@ class TestFilespec:
             filespec_parser(f"pydicom::rtplan.dcm::{bad_index}")
 
     def test_offers_pydicom_testfile(self):
-        """CLI message offers pydicom data file if file not found"""
+        """CLI message offers pydicom_v3_0_1 data file if file not found"""
         with pytest.raises(
             ArgumentTypeError, match=r".*pydicom::rtplan\.dcm.*is available.*"
         ):
@@ -114,7 +114,7 @@ class TestCLIcall:
         """CLI `pydicom` with no arguments displays help"""
         main([])
         out, _ = capsys.readouterr()
-        assert out.startswith("usage: pydicom [-h] {")
+        assert out.startswith("usage: pydicom_v3_0_1 [-h] {")
 
     def test_codify_command(self, capsys):
         """CLI `codify` command prints correct output"""
@@ -146,7 +146,7 @@ class TestCLIcall:
         # With subcommand
         main("help show".split())
         out, err = capsys.readouterr()
-        assert out.startswith("usage: pydicom show [-h] [")
+        assert out.startswith("usage: pydicom_v3_0_1 show [-h] [")
         assert err == ""
 
         # No subcommand following

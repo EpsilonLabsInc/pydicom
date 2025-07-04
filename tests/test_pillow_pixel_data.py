@@ -1,14 +1,14 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 
 import pytest
 
-import pydicom
-from pydicom.data import get_testdata_file
-from pydicom.encaps import get_frame, generate_frames, encapsulate
-from pydicom.filereader import dcmread
-from pydicom.pixels.processing import convert_color_space
-from pydicom.pixels.utils import get_j2k_parameters
-from pydicom.uid import (
+import pydicom_v3_0_1
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.encaps import get_frame, generate_frames, encapsulate
+from pydicom_v3_0_1.filereader import dcmread
+from pydicom_v3_0_1.pixels.processing import convert_color_space
+from pydicom_v3_0_1.pixels.utils import get_j2k_parameters
+from pydicom_v3_0_1.uid import (
     JPEGBaseline8Bit,
     JPEGLosslessSV1,
     JPEGExtended12Bit,
@@ -20,7 +20,7 @@ from pydicom.uid import (
 
 try:
     import numpy as np
-    from pydicom.pixel_data_handlers import numpy_handler as NP_HANDLER
+    from pydicom_v3_0_1.pixel_data_handlers import numpy_handler as NP_HANDLER
 
     HAVE_NP = True
 except ImportError:
@@ -28,8 +28,8 @@ except ImportError:
     HAVE_NP = False
 
 try:
-    from pydicom.pixel_data_handlers import pillow_handler as PIL_HANDLER
-    from pydicom.pixel_data_handlers.pillow_handler import get_pixeldata
+    from pydicom_v3_0_1.pixel_data_handlers import pillow_handler as PIL_HANDLER
+    from pydicom_v3_0_1.pixel_data_handlers.pillow_handler import get_pixeldata
 
     HAVE_PIL = PIL_HANDLER.HAVE_PIL
     HAVE_JPEG = PIL_HANDLER.HAVE_JPEG
@@ -200,7 +200,7 @@ class TestNoNumpy_NoPillowHandler:
         ds.pixel_array_options(use_v2_backend=True)
         msg = (
             "The pixel data handler 'pillow' is not available on your "
-            "system. Please refer to the pydicom documentation*"
+            "system. Please refer to the pydicom_v3_0_1 documentation*"
         )
         with pytest.raises(RuntimeError, match=msg):
             ds.decompress("pillow")

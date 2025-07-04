@@ -1,11 +1,11 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 
 import os
 import sys
 import pytest
-import pydicom
-from pydicom.filereader import dcmread
-from pydicom.data import get_testdata_file
+import pydicom_v3_0_1
+from pydicom_v3_0_1.filereader import dcmread
+from pydicom_v3_0_1.data import get_testdata_file
 
 pillow_missing_message = "pillow is not available in this test environment"
 pillow_present_message = "pillow is being tested"
@@ -15,7 +15,7 @@ jpeg_ls_missing_message = "jpeg_ls is not available in this test environment"
 
 
 try:
-    from pydicom.pixel_data_handlers import numpy_handler
+    from pydicom_v3_0_1.pixel_data_handlers import numpy_handler
 
     HAVE_NP = numpy_handler.HAVE_NP
 except ImportError:
@@ -23,7 +23,7 @@ except ImportError:
     numpy_handler = None
 
 try:
-    from pydicom.pixel_data_handlers import pillow_handler
+    from pydicom_v3_0_1.pixel_data_handlers import pillow_handler
 
     HAVE_PIL = pillow_handler.HAVE_PIL
     HAVE_JPEG = pillow_handler.HAVE_JPEG
@@ -35,7 +35,7 @@ except ImportError:
     HAVE_JPEG2K = False
 
 try:
-    from pydicom.pixel_data_handlers import jpeg_ls_handler
+    from pydicom_v3_0_1.pixel_data_handlers import jpeg_ls_handler
 
     HAVE_JPEGLS = jpeg_ls_handler.HAVE_JPEGLS
 except ImportError:
@@ -43,7 +43,7 @@ except ImportError:
     HAVE_JPEGLS = False
 
 try:
-    from pydicom.pixel_data_handlers import gdcm_handler
+    from pydicom_v3_0_1.pixel_data_handlers import gdcm_handler
 
     HAVE_GDCM = gdcm_handler.HAVE_GDCM
 except ImportError:

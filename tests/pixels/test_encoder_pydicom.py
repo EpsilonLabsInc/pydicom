@@ -1,4 +1,4 @@
-# Copyright 2008-2021 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2021 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for the 'pydicom' encoder plugin."""
 
 
@@ -11,16 +11,16 @@ try:
 except ImportError:
     HAVE_NP = False
 
-from pydicom import dcmread, Dataset
-from pydicom.data import get_testdata_file
-from pydicom.dataset import FileMetaDataset
-from pydicom.encaps import get_frame
-from pydicom.pixels.encoders import RLELosslessEncoder
-from pydicom.pixels.encoders.base import EncodeRunner
-from pydicom.pixels.encoders.native import _encode_frame, _encode_segment, _encode_row
-from pydicom.pixels.decoders.rle import _rle_decode_frame, _rle_decode_segment
-from pydicom.pixels.utils import reshape_pixel_array
-from pydicom.uid import RLELossless
+from pydicom_v3_0_1 import dcmread, Dataset
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.dataset import FileMetaDataset
+from pydicom_v3_0_1.encaps import get_frame
+from pydicom_v3_0_1.pixels.encoders import RLELosslessEncoder
+from pydicom_v3_0_1.pixels.encoders.base import EncodeRunner
+from pydicom_v3_0_1.pixels.encoders.native import _encode_frame, _encode_segment, _encode_row
+from pydicom_v3_0_1.pixels.decoders.rle import _rle_decode_frame, _rle_decode_segment
+from pydicom_v3_0_1.pixels.utils import reshape_pixel_array
+from pydicom_v3_0_1.uid import RLELossless
 
 
 # EXPL: Explicit VR Little Endian

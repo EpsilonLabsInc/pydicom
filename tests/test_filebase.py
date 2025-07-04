@@ -1,13 +1,13 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Test for filebase.py"""
 
 from io import BytesIO
 
 import pytest
 
-from pydicom.data import get_testdata_file
-from pydicom.filebase import DicomIO, DicomFileLike, DicomFile, DicomBytesIO
-from pydicom.tag import Tag
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.filebase import DicomIO, DicomFileLike, DicomFile, DicomBytesIO
+from pydicom_v3_0_1.tag import Tag
 
 
 TEST_FILE = get_testdata_file("CT_small.dcm")

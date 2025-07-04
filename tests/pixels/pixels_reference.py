@@ -9,8 +9,8 @@ try:
 except ImportError:
     HAVE_NP = False
 
-from pydicom.data import get_testdata_file
-from pydicom.uid import (
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.uid import (
     ExplicitVRLittleEndian,
     ImplicitVRLittleEndian,
     DeflatedExplicitVRLittleEndian,
@@ -30,7 +30,7 @@ from pydicom.uid import (
 )
 
 if TYPE_CHECKING:
-    from pydicom import Dataset
+    from pydicom_v3_0_1 import Dataset
 
 
 class PixelReference:

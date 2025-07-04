@@ -1,12 +1,12 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for dataset.py"""
 import logging
 
 import pytest
 
-from pydicom.tag import Tag
-from pydicom.uid import UID
-from pydicom.values import (
+from pydicom_v3_0_1.tag import Tag
+from pydicom_v3_0_1.uid import UID
+from pydicom_v3_0_1.values import (
     convert_value,
     converters,
     convert_tag,
@@ -18,7 +18,7 @@ from pydicom.values import (
     convert_PN,
     multi_string,
 )
-from pydicom.valuerep import VR
+from pydicom_v3_0_1.valuerep import VR
 
 
 class TestConvertTag:

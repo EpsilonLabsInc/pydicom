@@ -4,9 +4,9 @@ from pathlib import Path
 
 import pytest
 
-import pydicom
-from pydicom import examples, FileDataset
-from pydicom.examples import ct
+import pydicom_v3_0_1
+from pydicom_v3_0_1 import examples, FileDataset
+from pydicom_v3_0_1.examples import ct
 
 
 class TestExamples:

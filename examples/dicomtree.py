@@ -1,4 +1,4 @@
-# Copyright pydicom authors 2019. See LICENSE file for details
+# Copyright pydicom_v3_0_1 authors 2019. See LICENSE file for details
 """
 =========================================
 Show a dicom file using hierarchical tree
@@ -12,7 +12,7 @@ import sys
 import tkinter as tk
 from tkinter import ttk
 
-import pydicom
+import pydicom_v3_0_1
 
 
 print(__doc__)

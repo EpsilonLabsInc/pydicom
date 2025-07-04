@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Unit tests for the JPEG-LS Pixel Data handler."""
 
 import os
@@ -13,12 +13,12 @@ except ImportError:
 
 import pytest
 
-import pydicom
-from pydicom.data import get_testdata_file
-from pydicom.encaps import encapsulate, generate_frames
-from pydicom.filereader import dcmread
-from pydicom.pixel_data_handlers import numpy_handler
-from pydicom.pixel_data_handlers import jpeg_ls_handler
+import pydicom_v3_0_1
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.encaps import encapsulate, generate_frames
+from pydicom_v3_0_1.filereader import dcmread
+from pydicom_v3_0_1.pixel_data_handlers import numpy_handler
+from pydicom_v3_0_1.pixel_data_handlers import jpeg_ls_handler
 
 jpeg_ls_missing_message = "jpeg_ls is not available in this test environment"
 jpeg_ls_present_message = "jpeg_ls is being tested"

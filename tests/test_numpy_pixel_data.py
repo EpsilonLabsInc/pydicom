@@ -1,4 +1,4 @@
-# Copyright 2008-2018 pydicom authors. See LICENSE file for details.
+# Copyright 2008-2018 pydicom_v3_0_1 authors. See LICENSE file for details.
 """Tests for the pixel_data_handlers.numpy_handler module.
 
 There are the following possibilities:
@@ -29,12 +29,12 @@ There are the following possibilities:
 
 import pytest
 
-from pydicom import config
-from pydicom.data import get_testdata_file
-from pydicom.dataset import Dataset, FileMetaDataset
-from pydicom.filereader import dcmread
-from pydicom.pixels.processing import convert_color_space
-from pydicom.uid import (
+from pydicom_v3_0_1 import config
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.dataset import Dataset, FileMetaDataset
+from pydicom_v3_0_1.filereader import dcmread
+from pydicom_v3_0_1.pixels.processing import convert_color_space
+from pydicom_v3_0_1.uid import (
     ImplicitVRLittleEndian,
     ExplicitVRLittleEndian,
     DeflatedExplicitVRLittleEndian,
@@ -50,8 +50,8 @@ except ImportError:
     HAVE_NP = False
 
 try:
-    from pydicom.pixel_data_handlers import numpy_handler as NP_HANDLER
-    from pydicom.pixel_data_handlers.numpy_handler import (
+    from pydicom_v3_0_1.pixel_data_handlers import numpy_handler as NP_HANDLER
+    from pydicom_v3_0_1.pixel_data_handlers.numpy_handler import (
         get_pixeldata,
         unpack_bits,
     )

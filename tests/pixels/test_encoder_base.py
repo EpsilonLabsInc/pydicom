@@ -12,14 +12,14 @@ try:
 except ImportError:
     HAVE_NP = False
 
-from pydicom import config, examples
-from pydicom.data import get_testdata_file
-from pydicom.dataset import Dataset
-from pydicom.pixels.encoders import RLELosslessEncoder
-from pydicom.pixels.common import PhotometricInterpretation as PI
-from pydicom.pixels.encoders.base import Encoder, EncodeRunner
-from pydicom.pixels.utils import get_expected_length
-from pydicom.uid import (
+from pydicom_v3_0_1 import config, examples
+from pydicom_v3_0_1.data import get_testdata_file
+from pydicom_v3_0_1.dataset import Dataset
+from pydicom_v3_0_1.pixels.encoders import RLELosslessEncoder
+from pydicom_v3_0_1.pixels.common import PhotometricInterpretation as PI
+from pydicom_v3_0_1.pixels.encoders.base import Encoder, EncodeRunner
+from pydicom_v3_0_1.pixels.utils import get_expected_length
+from pydicom_v3_0_1.uid import (
     UID,
     RLELossless,
     JPEGLSLossless,
@@ -1803,16 +1803,16 @@ class TestFuture:
 
     def test_imports_raise(self, use_future):
         with pytest.raises(ImportError):
-            from pydicom.encoders import get_encoder
+            from pydicom_v3_0_1.encoders import get_encoder
 
         with pytest.raises(ImportError):
-            from pydicom.encoders import RLELosslessEncoder
+            from pydicom_v3_0_1.encoders import RLELosslessEncoder
 
 
 def test_deprecation_warning():
     msg = (
         "The 'pydicom.encoders' module will be removed in v4.0, please use "
-        "'from pydicom.pixels import get_encoder' instead"
+        "'from pydicom_v3_0_1.pixels import get_encoder' instead"
     )
     with pytest.warns(DeprecationWarning, match=msg):
-        from pydicom.encoders import get_encoder as get_foo
+        from pydicom_v3_0_1.encoders import get_encoder as get_foo
